@@ -1,14 +1,14 @@
 [
   {
-    "book": "Attack of the Books",
-    "email": "Verigood Author"
+    "title": "Attack of the Books",
+    "author": "Verigood Author"
   },
   {
-    "book": "Books 17: Never Enough",
-    "email": "Duey Rightsalot"
+    "title": "Books 17: Never Enough",
+    "author": "Duey Rightsalot"
   },
   {
-    "book": "Books 1: The Beginning",
-    "email": "Jess Starded"
+    "title": "Books 1: The Beginning",
+    "author": "Jess Starded"
   }
 ]
