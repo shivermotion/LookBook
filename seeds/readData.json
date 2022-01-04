@@ -1,0 +1,17 @@
+[
+  {
+    "user_id": "2",
+    "book_id": "1",
+    "rating": 7
+  },
+  {
+    "user_id": "1",
+    "book_id": "3",
+    "rating": 3
+  },
+  {
+    "user_id": "3",
+    "book_id": "2",
+    "rating": 5
+  }
+]
