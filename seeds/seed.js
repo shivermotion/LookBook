@@ -13,9 +13,9 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  await bookData();
+  const books = await Book.bulkCreate(bookData);
 
-  await readData();
+  const reads = await Read.bulkCreate(readData);
 
   process.exit(0);
 };
