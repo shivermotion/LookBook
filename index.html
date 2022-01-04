@@ -5,17 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LookBook</title>
+    <link rel="icon" type="image/x-icon" href="./public/open-book.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"
         integrity="sha512-IgmDkwzs96t4SrChW29No3NXBIBv8baW490zk5aXvhCD8vuZM3yUSkbyTBcXohkySecyzIrUwiF/qV0cuPcL3Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
+    <!--navbar-->
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item" href="https://bulma.io">
-                <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+            <a class="navbar-item" href="index.html">
+                <img src="./public/open-book.png">
             </a>
 
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
@@ -32,10 +34,6 @@
                     Home
                 </a>
 
-                <a class="navbar-item">
-                    Documentation
-                </a>
-
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link">
                         More
@@ -45,15 +43,9 @@
                         <a class="navbar-item">
                             About
                         </a>
-                        <a class="navbar-item">
-                            Jobs
-                        </a>
+
                         <a class="navbar-item">
                             Contact
-                        </a>
-                        <hr class="navbar-divider">
-                        <a class="navbar-item">
-                            Report an issue
                         </a>
                     </div>
                 </div>
@@ -73,6 +65,42 @@
             </div>
         </div>
     </nav>
+    <!--primary hero container-->
+    <div class="hero is-fullheight is-primary">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <div class="column is-8 is-offset-2">
+                    <h3 class="title has-text-white">Login</h3>
+                    <hr class="login-hr">
+                    <p class="subtitle has-text-white">its time to lookie lookie whats in the bookie</p>
+                </div>
+                <!--login container-->
+                <div class="box">
+                    <!--imagebox-->
+                    <div class="box">
+                        <img src="./public/open-book.png">
+                    </div>
+                    <div class="title has-text-grey is-5">Please enter your email and password.</div>
+                    <!--login forms-->
+                    <form>
+                        <div class="field">
+                            <div class="control">
+                                <input class="input is-large" type="email" placeholder="Email" autofocus="">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <input class="input is-large" type="password" placeholder="Password">
+                            </div>
+                        </div>
+                    </form>
+                    <!--/login forms-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
 </body>
 
