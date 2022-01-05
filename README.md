@@ -1,5 +1,7 @@
 # LookBook
 
+![lookbook-mock](https://user-images.githubusercontent.com/75548830/148240330-a43a3853-cde8-470f-b303-7cd266bebedd.png)
+
 # Table of Content
 
 -[description](#description) -[installation](#installation) -[usage](#usage) -[licenses](#licenses) -[contribution](#contribution) -[test](#test) -[username](#username) -[profile](#profile)
@@ -10,11 +12,7 @@ shivermotion, colinmchale, Wingz003
 
 ## Description:
 
-a social platform to keep track of books and rate and comment on them.
-
-## Installation:
-
-## Usage:
+a social platform to keep track of books to rate and comment on them.
 
 ## Licenses:
 
