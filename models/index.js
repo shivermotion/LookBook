@@ -21,6 +21,13 @@ Book.belongsToMany(User, {
     as: 'read_books'
 });
 
+Book.hasMany(Read, {
+    foreignKey: 'book_id',
+    onDelete: 'CASCADE',
+});
 
+Read.belongsTo(Book, {
+    foreignKey: 'book_id'
+});
 
 module.exports = { Read, Book, User };
