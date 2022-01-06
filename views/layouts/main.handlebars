@@ -12,6 +12,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
+
 <body>
     <!--navbar-->
     <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -65,112 +66,11 @@
             </div>
         </div>
     </nav>
-    <!--primary hero container-->
-    <div class="hero is-fullheight is-primary">
-        <div class="hero-body">
-            <!--tiles container-->
-            <div class="tile is-ancestor">
-                <!-- All other tile elements -->
-                <div class="tile is-parent is-vertical is-4 is-primary">
-                    <article class="tile is-child notification is-light is-12">
-                        <article class="panel is-primary">
-                            <p class="panel-heading">
-                                Users
-                            </p>
 
-                            <div class="panel-block">
-                                <p class="control has-icons-left">
-                                    <input class="input is-primary" type="text" placeholder="Search">
-                                    <span class="icon is-left">
-                                        <i class="fas fa-search" aria-hidden="true"></i>
-                                    </span>
-                                </p>
-                            </div>
-                            <a class="panel-block is-active">
+   <!--handlebars goes here-->
+    {{{body}}}
 
-                                bulma
-                            </a>
-                            <a class="panel-block">
-
-                                marksheet
-                            </a>
-                            <a class="panel-block">
-
-                                minireset.css
-                            </a>
-                            <a class="panel-block">
-
-                                jgthms.github.io
-                            </a>
-                        </article>
-
-                        <article class="panel is-primary">
-                            <p class="panel-heading">
-                                Books
-                            </p>
-
-                            <div class="panel-block">
-                                <p class="control has-icons-left">
-                                    <input class="input is-primary" type="text" placeholder="Search">
-                                    <span class="icon is-left">
-                                        <i class="fas fa-search" aria-hidden="true"></i>
-                                    </span>
-                                </p>
-                            </div>
-                            <a class="panel-block is-active">
-
-                                bulma
-                            </a>
-                            <a class="panel-block">
-
-                                marksheet
-                            </a>
-                            <a class="panel-block">
-
-                                minireset.css
-                            </a>
-                            <a class="panel-block">
-
-                                jgthms.github.io
-                            </a>
-                        </article>
-
-                    </article>
-
-                </div>
-                <!---->
-
-                <div class="tile is-parent notification is-warning m-3 ">
-                    <!-- Add content or other tiles -->
-                    <section class="section">
-                        <h1 class="title">Recently Read</h1>
-                        <h2 class="subtitle">
-                            A simple container to divide your page into <strong>sections</strong>, like the one
-                            you're
-                            currently
-                            reading.
-                        </h2>
-                    </section>
-                </div>
-                <!---->
-                <div class="tile is-parent notification is-danger m-3">
-                    <section class="section">
-                        <h1 class="title">Favorites</h1>
-                        <h2 class="subtitle">
-                            A simple container to divide your page into <strong>sections</strong>, like the one
-                            you're
-                            currently
-                            reading.
-                        </h2>
-                    </section>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    </div>
-
-    <!--sign up modal-->
+     <!--sign up modal-->
     <div id="myModal" class="modal">
         <div class="modal-background"></div>
 
@@ -266,7 +166,8 @@
             console.log("closed")
         })
     </script>
-    <script src=""></script>
+
+<script src="./js/loginPage.js"></script>
 </body>
 
 </html>
