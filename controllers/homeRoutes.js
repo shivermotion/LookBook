@@ -68,7 +68,7 @@ router.get('/user/:id', async (req, res) => {
     const bookData = await Book.findAll();
     const userData = await User.findAll();
     
-    const currentUserData = await User.findByPk(2, {
+    const currentUserData = await User.findByPk(1, {
         attributes: { exclude: ['password'] },
         include: [
           { 
