@@ -1,5 +1,55 @@
+ <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+                <img src="./public/open-book.png">
+            </a>
 
-<!--primary hero container-->
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item">
+                    Home
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        More
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item">
+                            About
+                        </a>
+
+                        <a class="navbar-item">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a id="button" class="button is-primary">
+                            <strong>Sign up</strong>
+                        </a>
+                        <a class="button is-light">
+                            Log in
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--primary hero container-->
     <div class="hero is-fullheight is-primary">
         <div class="hero-body">
             <div class="container has-text-centered">
@@ -12,7 +62,7 @@
                 <div class="box">
                     <!--imagebox-->
                     <div class="box">
-                        <img src="/public/openbook.png">
+                        <img src="./public/open-book.png">
                     </div>
                     <div class="title has-text-grey is-5">Please enter your username and password.</div>
                     <!--login forms-->
@@ -65,69 +115,3 @@
 
         <button class="modal-close is-large" aria-label="close"></button>
     </div>
-
-    <!--JS for Modal-->
-    <script>
-        class BulmaModal {
-            constructor(selector) {
-                this.elem = document.querySelector(selector)
-                this.close_data()
-            }
-
-            show() {
-                this.elem.classList.toggle('is-active')
-                this.on_show()
-            }
-
-            close() {
-                this.elem.classList.toggle('is-active')
-                this.on_close()
-            }
-
-            close_data() {
-                var modalClose = this.elem.querySelectorAll("[data-bulma-modal='close'], .modal-background")
-                var that = this
-                modalClose.forEach(function (e) {
-                    e.addEventListener("click", function () {
-
-                        that.elem.classList.toggle('is-active')
-
-                        var event = new Event('modal:close')
-
-                        that.elem.dispatchEvent(event);
-                    })
-                })
-            }
-
-            on_show() {
-                var event = new Event('modal:show')
-
-                this.elem.dispatchEvent(event);
-            }
-
-            on_close() {
-                var event = new Event('modal:close')
-
-                this.elem.dispatchEvent(event);
-            }
-
-            addEventListener(event, callback) {
-                this.elem.addEventListener(event, callback)
-            }
-        }
-
-        var btn = document.querySelector("#button")
-        var mdl = new BulmaModal("#myModal")
-
-        btn.addEventListener("click", function () {
-            mdl.show()
-        })
-
-        mdl.addEventListener('modal:show', function () {
-            console.log("opened")
-        })
-
-        mdl.addEventListener("modal:close", function () {
-            console.log("closed")
-        })
-    </script>
