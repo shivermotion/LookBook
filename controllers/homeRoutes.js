@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Book, User, Read } = require('../models');
 // const withAuth = require('../utils/auth');
 
-router.get('/', async (req, res) => {
+router.get('/book', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
     const bookData = await Book.findAll({
