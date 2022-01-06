@@ -12,15 +12,12 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-
 <body>
-
-    {{{ body }}}
     <!--navbar-->
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="index.html">
-                <img src="./public/open-book.png">
+                <img src="/public/openbook.png">
             </a>
 
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
@@ -68,11 +65,43 @@
             </div>
         </div>
     </nav>
+    <!--primary hero container-->
+    <div class="hero is-fullheight is-primary">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <div class="column is-8 is-offset-2">
+                    <h3 class="title has-text-white">Login</h3>
+                    <hr class="login-hr">
+                    <p class="subtitle has-text-white">its time to lookie lookie whats in the bookie</p>
+                </div>
+                <!--login container-->
+                <div class="box">
+                    <!--imagebox-->
+                    <div class="box">
+                        <img src="/public/openbook.png">
+                    </div>
+                    <div class="title has-text-grey is-5">Please enter your username and password.</div>
+                    <!--login forms-->
+                    <form>
+                        <div class="field">
+                            <div class="control">
+                                <input class="input is-large" type="username" placeholder="Username" autofocus="">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <input class="input is-large" type="password" placeholder="Password">
+                            </div>
+                        </div>
+                    </form>
+                    <!--/login forms-->
 
-   <!--handlebars goes here-->
-    {{{body}}}
+                </div>
+            </div>
+        </div>
+    </div>
 
-     <!--sign up modal-->
+    <!--sign up modal-->
     <div id="myModal" class="modal">
         <div class="modal-background"></div>
 
@@ -169,7 +198,6 @@
         })
     </script>
 
-<script src="./js/loginPage.js"></script>
 </body>
 
 </html>
