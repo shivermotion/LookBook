@@ -37,10 +37,10 @@ app.set('view engine', 'hbs');
 
 // Inform Express.js on which template engine to use
 
-app.get('/', function (req, res) {
-  res.render('home');
-});
 
+app.get('/', function (req, res) {
+  res.render('login');
+});
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
