@@ -44,7 +44,7 @@ router.get('/book/:id', withAuth, async (req, res) => {
       include: [
         {
           model: Read,
-          attributes: ['rating', 'comment'],
+          attributes: ['rating'],
         },
       ],
     });
