@@ -51,7 +51,7 @@
                 <!--RecentlyRead-->
                 <div class="tile is-parent notification is-primary m-3 ">
                     <section class="section">
-                        <h1 class="title">Recently Read:</h1>
+                        <h1 class="title"> Your Recently Read:</h1>
                         {{#if logged_in_user.user_books.length}}
                         {{#each logged_in_user.user_books as |book|}}
                             <h2><a href="/book/{{book.id}}">{{book.title}}</a></h2>
@@ -65,12 +65,13 @@
                 <!--Favorites-->
                 <div class="tile is-parent notification is-primary m-3">
                     <section class="section">
-                        <h1 class="title">Favorites:</h1>
+                        <h1 class="title"> Your Favorites:</h1>
                         <h2 class="subtitle">
-                            A simple container to divide your page into <strong>sections</strong>, like the one
-                            you're
-                            currently
-                            reading.
+                           <ul style="list-style: circle;">
+                               <li><p  class="is-underlined">Attack of the Books</p></li>
+                               <li><p class="is-underlined">Harry Bladder and the Warlocks Scone?</p></li>
+                               <li><p class="is-underlined">The Bible:2</p></li>
+                           </ul>
                         </h2>
                     </section>
                 </div>
