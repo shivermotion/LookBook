@@ -31,36 +31,29 @@
 
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item">
-                    Home
+                <a class="navbar-item" href='/dashboard'>
+                    Dashboard
                 </a>
-
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">
-                        More
-                    </a>
-
-                    <div class="navbar-dropdown">
-                        <a class="navbar-item">
-                            About
-                        </a>
-
-                        <a class="navbar-item">
-                            Contact
-                        </a>
-                    </div>
-                </div>
             </div>
 
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
+
+
+                        {{#if logged_in}}
+                        <a class="button is-light" id='logout' href='/'>
+                            Log Out
+                        </a>
+                        {{else}}
                         <a id="button" class="button is-primary">
-                            <strong>Sign up</strong>
+                            <strong>Sign Up</strong>
                         </a>
-                        <a class="button is-light">
-                            Log in
+                        <a class="button is-light" href='/'>
+                            Log In
                         </a>
+                        {{/if}}
+                        
                     </div>
                 </div>
             </div>
@@ -76,25 +69,25 @@
 
         <div class="modal-content">
             <div class="box">
-                <p>sign up</p>
-                <form>
+                <p>Sign Up</p>
+                <form class='signup-form'>
                     <div class="field">
                         <div class="control">
-                            <input class="input is-large" type="email" placeholder="email" autofocus="">
+                            <input class="input is-large" id='email-signup' type="email" placeholder="email" autofocus="">
                         </div>
                     </div>
                     <div class="field">
                         <div class="control">
-                            <input class="input is-large" type="username" placeholder="username">
+                            <input class="input is-large" id='user-signup' type="username" placeholder="username">
                         </div>
                     </div>
                     <div class="field">
                         <div class="control">
-                            <input class="input is-large" type="password" placeholder="Password">
+                            <input class="input is-large" id='password-signup' type="password" placeholder="Password">
                         </div>
                     </div>
                 </form>
-                <button class="button is-danger">Close</button>
+                <button class="button is-danger mt-2" type='submit'>Submit</button>
             </div>
         </div>
 
@@ -167,7 +160,14 @@
         })
     </script>
 
-<script src="./js/login.js"></script>
+{{#if logged_in}}
+  <script src="/js/logout.js"></script>
+   {{else}}
+  <script src="./js/login.js"></script> 
+{{/if}}
+
+
+
 </body>
 
 </html>
