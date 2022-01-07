@@ -14,7 +14,10 @@ shivermotion, colinmchale, Wingz003
 
 ## Description:
 
-a social platform to keep track of books to rate and comment on them.
+A social platform to keep track of books to rate and comment on them.
+Allows the users ability to sign up, log in, and provide a dashboard to track other profiles and related content.
+Includes a working deployed backend that stores book info, encrypted user login info, and related users social media comments.
+main builder components include Bulma CSS, HandleBars, and Javascript
 
 ## Licenses:
 
