@@ -48,41 +48,35 @@
 
                 </div>
                 <!---->
-
-                <div class="tile is-parent notification is-primary m-3 ">
-                    <!-- Add content or other tiles -->
+                <div class="tile is-parent is-vertical is-primary">
+                
+                 <div class="tile is-parent notification is-light m-3">
                     <section class="section">
-                        <h1 class="title">Recently Read:</h1>
-                        {{#if logged_in_user.user_books.length}}
-  
-                        {{#each logged_in_user.user_books as |book|}}
-                            <h2><a href="/book/{{book.id}}">{{book.title}}</a></h2>
-                                <p>{{book.author}}</p>
-                        {{/each}}
-                        
-                        
-                        {{/if}}
+                        <h1 class="title has-text-black">Commented:</h1>
                         <h2 class="subtitle">
-                            A simple container to divide your page into <strong>sections</strong>, like the one
-                            you're
-                            currently
-                            reading.
+                           <p class="has-text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quo dolorum vero recusandae natus, aliquid voluptate autem consectetur laudantium eius animi dolor nesciunt molestiae corrupti dicta voluptatibus obcaecati repudiandae iusto?</p>
                         </h2>
                     </section>
-                </div>
-                <!---->
-                <div class="tile is-parent notification is-primary m-3">
+                    </div>
+                 <div class="tile is-parent notification is-light m-3">
                     <section class="section">
-                        <h1 class="title">Favorites:</h1>
+                        <h1 class="title has-text-black">Commented:</h1>
                         <h2 class="subtitle">
-                            A simple container to divide your page into <strong>sections</strong>, like the one
-                            you're
-                            currently
-                            reading.
+                           <p class="has-text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quo dolorum vero recusandae natus, aliquid voluptate autem consectetur laudantium eius animi dolor nesciunt molestiae corrupti dicta voluptatibus obcaecati repudiandae iusto?</p>
                         </h2>
                     </section>
+                    </div>
+                 <div class="tile is-parent notification is-light m-3">
+                    <section class="section">
+                        <h1 class="title has-text-black">Commented:</h1>
+                        <h2 class="subtitle">
+                           <p class="has-text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quo dolorum vero recusandae natus, aliquid voluptate autem consectetur laudantium eius animi dolor nesciunt molestiae corrupti dicta voluptatibus obcaecati repudiandae iusto?</p>
+                        </h2>
+                    </section>
+                    </div>
+                 
                 </div>
-            </div>
+                </div>
         </div>
 
     </div>
