@@ -31,10 +31,6 @@ Read.init(
         type: DataTypes.INTEGER,
         allowNull: true
     },
-    comment: {
-      type: DataTypes.STRING,
-      allowNull: true
-  }
   },
   {
     sequelize,

@@ -1,18 +1,31 @@
 [
   {
-    "user_id": "2",
-    "book_id": "1",
-    "rating": 9,
-    "comment": "Great read. Really enjoyed every moment of this book"
+    "user_id": "7",
+    "book_id": "2",
+    "rating": 7
   },
   {
-    "user_id": "1",
-    "book_id": "3",
-    "rating": 3,
-    "comment": "It wasn't very good but I also don't really enjoy reading"
+    "user_id": "2",
+    "book_id": "5",
+    "rating": 3
   },
   {
     "user_id": "3",
+    "book_id": "1",
+    "rating": 5
+  },
+  {
+    "user_id": "4",
+    "book_id": "7",
+    "rating": 7
+  },
+  {
+    "user_id": "7",
+    "book_id": "3",
+    "rating": 3
+  },
+  {
+    "user_id": "5",
     "book_id": "2",
     "rating": 5
   }
