@@ -29,8 +29,8 @@ Read.init(
     },
     rating: {
         type: DataTypes.INTEGER,
-    }
-
+        allowNull: true
+    },
   },
   {
     sequelize,

@@ -7,9 +7,9 @@ router.get('/dashboard', async (req, res) => {
     // Get all projects and JOIN with user data
     const bookData = await Book.findAll();
     const userData = await User.findAll();
-    console.log(req.session.user_id);
+    // console.log(req.session.user_id);
     
-    const logged_in_userData = await User.findByPk(1, {
+    const logged_in_userData = await User.findByPk(req.session.user_id, {
         attributes: { exclude: ['password'] },
         include: [
           { 
@@ -23,7 +23,7 @@ router.get('/dashboard', async (req, res) => {
     const books = bookData.map((book) => book.get({ plain: true }));
     const users = userData.map((user) => user.get({ plain: true }));
     const logged_in_user = logged_in_userData.get({ plain: true });
-console.log(logged_in_user);
+// console.log(logged_in_user);
     // // Pass serialized data and session flag into template
     res.render('dashboard', { 
       books, users, logged_in_user,
@@ -40,11 +40,11 @@ router.get('/book/:id', withAuth, async (req, res) => {
     const bookData = await Book.findAll();
     const userData = await User.findAll();
     
-    const currentBookData = await Book.findByPk(1, {
+    const currentBookData = await Book.findByPk(req.params.id, {
       include: [
         {
           model: Read,
-          attributes: ['rating'],
+          attributes: ['rating', 'comment'],
         },
       ],
     });
@@ -69,7 +69,7 @@ router.get('/user/:id', withAuth, async (req, res) => {
     const bookData = await Book.findAll();
     const userData = await User.findAll();
     
-    const currentUserData = await User.findByPk(1, {
+    const currentUserData = await User.findByPk(req.params.id, {
         attributes: { exclude: ['password'] },
         include: [
           { 
