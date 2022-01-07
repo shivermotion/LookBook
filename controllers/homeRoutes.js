@@ -1,14 +1,15 @@
 const router = require("express").Router();
 const { Book, User, Read } = require("../models");
-// const withAuth = require('../utils/auth');
+const withAuth = require('../utils/auth');
 
 router.get('/dashboard', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
     const bookData = await Book.findAll();
     const userData = await User.findAll();
+    console.log(req.session.user_id);
     
-    const logged_in_userData = await User.findByPk(2, {
+    const logged_in_userData = await User.findByPk(1, {
         attributes: { exclude: ['password'] },
         include: [
           { 
@@ -34,12 +35,12 @@ console.log(logged_in_user);
   }
 });
 
-router.get('/book/:id', async (req, res) => {
+router.get('/book/:id', withAuth, async (req, res) => {
   try {
     const bookData = await Book.findAll();
     const userData = await User.findAll();
     
-    const currentBookData = await Book.findByPk(req.params.id, {
+    const currentBookData = await Book.findByPk(1, {
       include: [
         {
           model: Read,
@@ -63,7 +64,7 @@ router.get('/book/:id', async (req, res) => {
   }
 });
 
-router.get('/user/:id', async (req, res) => {
+router.get('/user/:id', withAuth, async (req, res) => {
     try {
     const bookData = await Book.findAll();
     const userData = await User.findAll();
