@@ -53,6 +53,20 @@
                 <!---->
                 <div class="tile is-parent is-vertical is-primary">
                 
+                {{#if currentBook.rating}}
+                {{#each currentBook.rating as |rating| }}
+                 <div class="tile is-parent notification is-light m-3"></div>
+                 <section class="section"></section>
+                        <h1 class="title has-text-black">Rating:< {{rating.rating}}/h1>
+                        <h2 class="subtitle"></h2>
+                            <p class="has-text-black">{{rating.comment}}</p>
+                            </h2>
+                    </section>
+                    </div>
+
+                {{/each}}
+                {{/if}}
+
                  <div class="tile is-parent notification is-light m-3">
                     <section class="section">
                         <h1 class="title has-text-black">Commented:</h1>

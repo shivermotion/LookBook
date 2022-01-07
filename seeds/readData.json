@@ -2,12 +2,14 @@
   {
     "user_id": "2",
     "book_id": "1",
-    "rating": 7
+    "rating": 9,
+    "comment": "Great read. Really enjoyed every moment of this book"
   },
   {
     "user_id": "1",
     "book_id": "3",
-    "rating": 3
+    "rating": 3,
+    "comment": "It wasn't very good but I also don't really enjoy reading"
   },
   {
     "user_id": "3",

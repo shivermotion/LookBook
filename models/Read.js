@@ -29,8 +29,12 @@ Read.init(
     },
     rating: {
         type: DataTypes.INTEGER,
-    }
-
+        allowNull: true
+    },
+    comment: {
+      type: DataTypes.STRING,
+      allowNull: true
+  }
   },
   {
     sequelize,
